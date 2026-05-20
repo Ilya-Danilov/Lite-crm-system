@@ -77,3 +77,26 @@ body {
     font-size: 14px;
     line-height: 19px;
 }
+
+td a img{
+    width: 15px;
+    height: 15px;
+}
+
+.contacts{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+td{
+    text-align: center;
+}
+
+td button{
+    border: 0px;
+    background: none;
+}
+
+td button:hover{
+    cursor: pointer;
+}
