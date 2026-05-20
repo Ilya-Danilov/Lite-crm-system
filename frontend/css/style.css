@@ -84,14 +84,14 @@ td a img{
 }
 
 .contacts{
-    display: table-cell; /* Возвращаем ячейке её законный тип */
-    text-align: center;  /* Выравниваем текст и инлайновые элементы по центру */
+    display: table-cell; 
+    text-align: center;  
     vertical-align: middle; 
 }
 
 .contacts a {
-    display: inline-block; /* Позволяет иконкам вставать в ряд */
-    margin: 0 2px;         /* Небольшой отступ между иконками вместо gap */
+    display: inline-block; 
+    margin: 0 2px;         
     vertical-align: middle;
 }
 
@@ -119,4 +119,16 @@ tr{
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+
+#tooltip{
+    width: max-content;
+    padding: 10px;
+    color: white;
+    background-color: #333333;
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    top: 0;
+    left: 0;
 }

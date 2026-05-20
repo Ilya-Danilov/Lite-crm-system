@@ -2,6 +2,7 @@ import * as get from '../CRUD/get.js'
 
 const tbody = document.querySelector('.main__tbody')
 const loading = document.querySelector('.main__load')
+const tooltip = document.getElementById('tooltip')
 
 function createClient(client){
     const tr = document.createElement('tr')
@@ -72,6 +73,18 @@ function createClient(client){
         iconImg.src = `${iconSrc}`
         a.append(iconDiv, iconImg)
         contacts.append(a)
+        a.addEventListener('mouseenter', () => {
+            tooltip.textContent = a.getAttribute('data-tooltip');
+            tooltip.style.display = 'block';
+        })
+        a.addEventListener('mousemove', (e) => {
+            tooltip.textContent = `${element.value}`
+            tooltip.style.left = e.clientX + 10 + 'px';
+            tooltip.style.top = e.clientY + 10 + 'px';
+        });
+        a.addEventListener('mouseleave', () => {
+            tooltip.style.display = 'none';
+        });
     });
     const actions = document.createElement('td')
     actions.classList.add('actions')
