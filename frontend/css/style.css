@@ -84,10 +84,17 @@ td a img{
 }
 
 .contacts{
-    display: flex;
-    gap: 5px;
-    justify-content: center;
+    display: table-cell; /* Возвращаем ячейке её законный тип */
+    text-align: center;  /* Выравниваем текст и инлайновые элементы по центру */
+    vertical-align: middle; 
 }
+
+.contacts a {
+    display: inline-block; /* Позволяет иконкам вставать в ряд */
+    margin: 0 2px;         /* Небольшой отступ между иконками вместо gap */
+    vertical-align: middle;
+}
+
 td{
     text-align: center;
 }
@@ -99,4 +106,17 @@ td button{
 
 td button:hover{
     cursor: pointer;
+}
+
+tbody tr{
+    background-color: white;
+    height: 50px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.476);
+}
+
+
+tr{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }

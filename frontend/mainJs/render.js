@@ -1,6 +1,7 @@
 import * as get from '../CRUD/get.js'
 
 const tbody = document.querySelector('.main__tbody')
+const loading = document.querySelector('.main__load')
 
 function createClient(client){
     const tr = document.createElement('tr')
@@ -87,7 +88,7 @@ function createClient(client){
 
 export async function rendering() {
     const data = await get.get()
-    console.log(data)
+    loading.style.display = 'none'
     data.forEach((client) => {
         createClient(client)
     })
