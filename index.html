@@ -33,11 +33,32 @@
             </tbody>
         </table>
         <div class="main__load"></div>
-        <button class="main__btn"> <svg  width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z" fill="#9873FF"/>
-          </svg>
-           <span>Добавить клиента</span></button>
-          <div id="tooltip" style="display: none;"></div>
+        <button id="main__btn" class="main__btn"> <svg width="23" height="16" viewBox="0 0 23 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z"
+                    fill="#9873FF" />
+            </svg>
+            <span>Добавить клиента</span></button>
+        <div id="tooltip" style="display: none;"></div>
+        <div style="display: none;" id="background-form-add-clent">
+            <div id="main__form-add-client">
+                <button id="exit-form-add-client">X</button>
+                <h2 id="header-add-or-edit-contact">Добавить контакт</h2>
+                <form id="form-add-client" action="">
+                    <label for="add-name">Имя*</label>
+                    <input required type="text" id="add-name">
+                    <label for="add-surname">Фамилия*</label>
+                    <input required type="text" id="add-surname">
+                    <label for="add-lastname">Отчество</label>
+                    <input type="text" id="add-lastname">
+                    <div id="add-contacts">
+                        <button id="but-add-contacts">Добавить контакт</button>
+                    </div>
+                    <button id="but-add-client">Добавить</button>
+                </form>
+            </div>
+        </div>
     </main>
 
 </body>
