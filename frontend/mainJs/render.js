@@ -13,6 +13,7 @@ const editName = document.getElementById('edit-name')
 const editSurname = document.getElementById('edit-surname')
 const editLastname = document.getElementById('edit-lastname')
 const containerForContact = document.getElementById('edit-contacts')
+const addContacsForEditClient = document.getElementById('but-edit-contacts')
 
 let currentClientId = null
 
@@ -135,14 +136,14 @@ function createClient(client) {
     tbody.append(tr)
 }
 
-edit.addEventListener('click', (e) => {
+edit.addEventListener('click', async (e) => {
     e.preventDefault()
     if (!currentClientId) return
     const data = { contacts: [] }
     const contact = document.querySelectorAll('#choice-contacts')
-    data.name = editName.value
-    data.surname = editSurname.value
-    data.lastName = editLastname.value
+    data.name = await editName.value
+    data.surname = await editSurname.value
+    data.lastName = await editLastname.value
     contact.forEach((element) => {
         const type = element.querySelector('select')
         const inputContact = element.querySelector('input')
@@ -154,7 +155,12 @@ edit.addEventListener('click', (e) => {
     visibleEdit.style.display = 'none'
 
     tbody.innerHTML = ''
-    rendering()
+    const freshData = await get.get()
+    rendering(freshData)
+})
+
+addContacsForEditClient.addEventListener('click', () => {
+    general.addCardContact(containerForContact)
 })
 
 export async function rendering(data) {
