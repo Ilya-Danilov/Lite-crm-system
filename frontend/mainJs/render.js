@@ -1,6 +1,7 @@
 import * as get from '../CRUD/get.js'
 import * as general from '../mainJs/addAndEditCard/general.js'
 import * as patch from '../CRUD/patch.js'
+import * as del from '../CRUD/delete.js'
 
 const tbody = document.querySelector('.main__tbody')
 const loading = document.querySelector('.main__load')
@@ -125,6 +126,9 @@ function createClient(client) {
     delBut.classList.add('del-but')
     delBut.textContent = 'Удалить'
 
+    delBut.addEventListener('click', () => {
+        del.deleteRequest(client.id)
+    })
 
     actions.append(editBut, delBut)
     tr.append(id, name, create, editCell, contacts, actions,)
