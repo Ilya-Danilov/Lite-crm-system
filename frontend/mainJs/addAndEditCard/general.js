@@ -20,7 +20,13 @@ export function addContact() {
         e.preventDefault()
         const contacts = document.querySelectorAll('#choice-contacts')
         if (contacts.length < 10) {
-            const div = document.createElement('div')
+           addCardContact(containerForContact) 
+        }
+    })
+}
+
+export function addCardContact(where, el = '', type = 'Phone') {
+    const div = document.createElement('div')
             div.id = 'choice-contacts'
             const select = document.createElement('select')
             select.id = 'type-contact'
@@ -40,19 +46,19 @@ export function addContact() {
             optionOther.textContent = 'Другое'
             optionOther.value = 'Other'
             select.append(optionPhone, optionMail, optionFacebook, optionVk, optionOther)
+            select.value = type
             const input = document.createElement('input')
             input.id = 'contacts'
             input.required = true
+            input.value = el
             const but = document.createElement('button')
             but.id = 'but-del-contacts'
             but.textContent = 'X'
             div.append(select, input, but)
-            containerForContact.prepend(div)
+            where.prepend(div)
             but.addEventListener('click', () => {
                 div.remove()
             })
-        }
-    })
 }
 
 export function clearContacts() {

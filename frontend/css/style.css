@@ -133,13 +133,13 @@ tr{
     left: 0;
 }
 
-#form-add-client{
+#form-add-client, #form-edit-client{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#main__form-add-client{
+#main__form-add-client, #main__form-edit-client{
     position: fixed;
     text-align: center;
     top: 50%;
@@ -150,7 +150,7 @@ tr{
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15), 0px 2px 10px rgba(0, 0, 0, 0.10);
 }
 
-#exit-form-add-client{
+#exit-form-add-client, #exit-form-edit-client{
     position: fixed;
     top: 0;
     right: 0;
@@ -160,7 +160,7 @@ tr{
     color: #333333;
 }
 
-#background-form-add-clent{
+#background-form-add-clent, #background-form-edit-clent{
     position: fixed;
     width: 100%;
     height: 100%;
@@ -169,7 +169,7 @@ tr{
     background-color: #dedede;
 }
 
-#add-contacts{
+#add-contacts, #edit-contacts{
     max-height: 300px;
     overflow-y: auto;
     display: flex;
@@ -183,7 +183,7 @@ tr{
     margin-top: 20px;
 }
 
-#but-add-client{
+#but-add-client, #but-edit-client{
     margin-top: 60px;
     padding: 10px;
 }
