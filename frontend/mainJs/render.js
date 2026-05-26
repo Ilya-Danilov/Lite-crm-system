@@ -157,9 +157,9 @@ edit.addEventListener('click', (e) => {
     rendering()
 })
 
-export async function rendering() {
-    const data = await get.get()
+export async function rendering(data) {
     loading.style.display = 'none'
+    tbody.textContent = ''
     data.forEach((client) => {
         createClient(client)
     })
