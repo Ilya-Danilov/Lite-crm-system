@@ -187,3 +187,7 @@ tr{
     margin-top: 60px;
     padding: 10px;
 }
+
+th{
+    cursor: pointer;
+}
